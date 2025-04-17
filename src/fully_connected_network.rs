@@ -169,8 +169,8 @@ fn softmax_loss(x: &Array2<f64>, y: &Array1<usize>) -> (f64, Array2<f64>) {
 
 pub struct FullyConnectedNet {
     num_layers: usize,
-    weight_params: HashMap<String, Array2<f64>>, // 存储权重 W
-    bias_params: HashMap<String, Array1<f64>>,   // 存储偏置 b
+    pub weight_params: HashMap<String, Array2<f64>>, // 存储权重 W
+    pub bias_params: HashMap<String, Array1<f64>>,   // 存储偏置 b
     reg: f64,
     loss_fn: LossFunction,  // 用于选择损失函数
 }
